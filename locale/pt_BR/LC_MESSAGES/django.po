@@ -30,6 +30,11 @@ msgstr "Atualizado em"
 msgid "Deleted at"
 msgstr "Deletado em"
 
+msgid "Event"
+msgstr "Evento"
+
+msgid "Events"
+msgstr "Eventos"
 
 msgid "Name"
 msgstr "Nome"
@@ -66,3 +71,12 @@ msgstr "Limite de Participantes"
 
 msgid "Active?"
 msgstr "Ativo?"
+
+msgid "Subscription"
+msgstr "Inscrição"
+
+msgid "Subscriptions"
+msgstr "Inscrições"
+
+msgid "Email"
+msgstr "Email"

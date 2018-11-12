@@ -56,7 +56,8 @@ EXTRA_APPS = [
 ]
 
 PROJECT_APPS = [
-    'redeneural.event.apps.EventConfig'
+    'redeneural.event.apps.EventConfig',
+    'redeneural.subscriptions.apps.SubscriptionsConfig',
 ]
 
 INSTALLED_APPS += EXTRA_APPS
