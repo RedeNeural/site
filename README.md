@@ -11,7 +11,7 @@
 1. Execute o runserver.
 
 ```console
-git clone git@bitbucket.org:cosmun/schedules.git
+git clone git@github.com:RedeNeural/site.git
 cd schedules
 virtualenv env --python=python3 # python 3.6 ou mais atual
 source env/bin/activate
