@@ -98,3 +98,12 @@ msgstr "Publicação"
 
 msgid "Posts"
 msgstr "Publicações"
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "Management"
+msgstr "Gerenciamento"
+
+msgid "Content"
+msgstr "Conteúdo"

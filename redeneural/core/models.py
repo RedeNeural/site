@@ -20,3 +20,15 @@ class AbstractBaseModel(models.Model):
         self.deleted_at = timezone.now()
         self.save()
         post_soft_delete.send(sender=type(self), instance=self, using=self._state.db)
+
+
+class About(AbstractBaseModel):
+
+    class Meta:
+        verbose_name = _('About')
+        verbose_name_plural = _('About')
+
+    content = models.TextField(verbose_name=_('Content'))
+
+    def __str__(self):
+        return self.content
