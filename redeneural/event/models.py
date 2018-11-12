@@ -1,3 +1,5 @@
+from auditlog.registry import auditlog
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -39,3 +41,6 @@ class Event(AbstractBaseModel):
 
     def __str__(self):
         return self.name
+
+
+auditlog.register(Event)
