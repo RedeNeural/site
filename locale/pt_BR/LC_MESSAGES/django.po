@@ -51,6 +51,9 @@ msgstr "Descrição Longa"
 msgid "Image"
 msgstr "Imagem"
 
+msgid "Images"
+msgstr "Imagens"
+
 msgid "Start Date"
 msgstr "Data de Início"
 
@@ -107,3 +110,9 @@ msgstr "Gerenciamento"
 
 msgid "Content"
 msgstr "Conteúdo"
+
+msgid "Gallery"
+msgstr "Galeria"
+
+msgid "Galleries"
+msgstr "Galerias"
