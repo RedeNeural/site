@@ -80,3 +80,21 @@ msgstr "Inscrições"
 
 msgid "Email"
 msgstr "Email"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Blogs"
+msgstr "Blogs"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Categories"
+msgstr "Categorias"
+
+msgid "Post"
+msgstr "Publicação"
+
+msgid "Posts"
+msgstr "Publicações"
