@@ -1,0 +1,32 @@
+# Application
+
+Django
+django-widget-tweaks
+django-extensions
+django-auditlog
+django-storages
+django-summernote
+psycopg2
+psycopg2-binary
+static3
+gunicorn
+dj-database-url
+dj-static
+python-decouple
+boto3
+pytz
+Pillow
+
+# Django Rest Framework
+
+djangorestframework
+itsdangerous
+django-cors-headers
+
+# Django Admin
+https://github.com/darklow/django-suit/tarball/v2
+
+# Django Tests
+
+django-test-without-migrations
+ipython

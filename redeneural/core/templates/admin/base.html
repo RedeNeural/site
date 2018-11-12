@@ -1,0 +1,25 @@
+{% extends 'admin/base.html' %}
+
+{% block footer %}
+
+<div id="footer">
+  <footer class="footer">
+    <div class="container-fluid">
+      {% block footer_content %}
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 text-sm-center footer-copyright">
+          {% block copyright %}
+            Copyright &copy;
+            <span class="hidden-md-down"></span>{% now "Y" %} Rede Neural
+            <br>Desenvolvido por Rede Neural
+          {% endblock %}
+        </div>
+
+      </div>
+      {% endblock %}
+    </div>
+  </footer>
+</div>
+
+{% endblock %}
