@@ -1,8 +1,6 @@
 import os
 from uuid import uuid4
 
-from django.conf import settings
-
 
 def get_storage_path(filename, subdir):
     _, ext = os.path.splitext(filename)

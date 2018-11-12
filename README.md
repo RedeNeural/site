@@ -24,6 +24,7 @@ python manage.py runserver
 ## Qualidade do código
 
 ```console
+pre-commit install
 flake8 --config=.flake8
 ```
 

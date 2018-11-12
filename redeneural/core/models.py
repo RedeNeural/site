@@ -1,3 +1,5 @@
+from auditlog.registry import auditlog
+
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
@@ -32,3 +34,6 @@ class About(AbstractBaseModel):
 
     def __str__(self):
         return self.content
+
+
+auditlog.register(About)

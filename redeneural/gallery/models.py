@@ -2,8 +2,8 @@ from auditlog.registry import auditlog
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django_extensions.db.models import AutoSlugField
 
+from redeneural.storage import get_storage_path
 from redeneural.core.models import AbstractBaseModel
 
 
@@ -21,16 +21,7 @@ class EventImage(AbstractBaseModel):
     image = models.ImageField(upload_to=get_image_path, verbose_name=_('Image'))
 
     def __str__(self):
-        return str(self.id)
+        return f'{self.event.name} - {str(self.id)}'
 
 
-# class EventImage(AbstractBaseModel):
-
-#     class Meta:
-#         verbose_name = _('Event Image')
-#         verbose_name_plural = _('Event Images')
-
-#     images = models.ManyToManyField(Image, verbose_name=_('Images'))
-
-#     def __str__(self):
-#         return str(self.id)
+auditlog.register(EventImage)
