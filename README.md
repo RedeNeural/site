@@ -27,11 +27,3 @@ python manage.py runserver
 pre-commit install
 flake8 --config=.flake8
 ```
-
-## Como fazer o deploy?
-
-1. Crie uma instância no heroku.
-1. Envie as configurações para o heroku.
-1. Define um SECRET_KEY segura para instância.
-1. Defina DEBUG=True
-
