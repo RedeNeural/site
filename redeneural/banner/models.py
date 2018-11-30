@@ -18,7 +18,7 @@ class Banner(AbstractBaseModel):
         verbose_name_plural = _('Banners')
 
     image = models.ImageField(upload_to=get_banner_path, verbose_name=_('Image'))
-    link = models.URLField(verbose_name='Link', null=True, blank=True)
+    link = models.URLField(verbose_name=_('Link'), null=True, blank=True)
 
     def __str__(self):
         return str(self.id)

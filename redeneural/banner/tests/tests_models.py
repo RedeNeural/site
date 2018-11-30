@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from django.test import TestCase
 
 from redeneural.banner.models import Banner
@@ -13,9 +11,6 @@ class BannerModelTest(TestCase):
 
         self.field_image = Banner._meta.get_field('image')
         self.field_link = Banner._meta.get_field('link')
-
-    def test_created_at(self):
-        self.assertIsInstance(self.obj.created_at, datetime)
 
     def test_str(self):
         self.assertEqual(str(self.obj), str(self.obj.id))

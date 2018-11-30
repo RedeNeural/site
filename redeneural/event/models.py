@@ -4,8 +4,6 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
-from django_extensions.db.models import AutoSlugField
-
 from redeneural.core.models import AbstractBaseModel
 from redeneural.storage import get_storage_path
 
@@ -24,16 +22,17 @@ class Event(AbstractBaseModel):
         verbose_name = _('Event')
         verbose_name_plural = _('Events')
 
+    meetup_group = models.ForeignKey('meetup_group.MeetupGroup', on_delete=models.CASCADE)
     name = models.CharField(verbose_name=_('Name'), max_length=255)
-    slug = AutoSlugField(verbose_name=_('Slug'), max_length=255, populate_from=['name'], unique=True, db_index=True)
+    slug = models.SlugField(verbose_name=_('Slug'), max_length=255, db_index=True)
 
-    short_description = models.TextField(verbose_name=_('Short Description'))
     long_description = models.TextField(verbose_name=_('Long Description'))
+    short_description = models.TextField(verbose_name=_('Short Description'), null=True, blank=True)
 
     start_date = models.DateField(verbose_name=_('Start Date'))
     end_date = models.DateField(verbose_name=_('End Date'))
     start_time = models.TimeField(verbose_name=_('Start Time'), null=True, blank=True)
-    end_time = models.TimeField(verbose_name=_('End Time'))
+    end_time = models.TimeField(verbose_name=_('End Time'), null=True, blank=True)
 
     location = models.CharField(verbose_name=_('Location'), max_length=500)
 

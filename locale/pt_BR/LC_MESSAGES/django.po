@@ -116,3 +116,7 @@ msgstr "Galeria"
 
 msgid "Galleries"
 msgstr "Galerias"
+
+msgid "Title"
+msgstr "Título"
+

@@ -61,6 +61,7 @@ PROJECT_APPS = [
     'redeneural.banner.apps.BannerConfig',
     'redeneural.blog.apps.BlogConfig',
     'redeneural.gallery.apps.GalleryConfig',
+    'redeneural.meetup_group.apps.MeetupGroupConfig',
 ]
 
 INSTALLED_APPS += EXTRA_APPS

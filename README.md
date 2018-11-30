@@ -17,7 +17,7 @@ virtualenv env --python=python3 # python 3.6 ou mais atual
 source env/bin/activate
 pip install -r requirements_dev.txt
 cp contrib/env-sample .env
-coverage run --source='.' manage.py test -v 2 ; coverage report --show-missing
+coverage run --source='.' manage.py test -v 1 -n ; coverage report --show-missing
 python manage.py runserver
 ```
 
@@ -26,4 +26,10 @@ python manage.py runserver
 ```console
 pre-commit install
 flake8 --config=.flake8
+```
+
+## Compilar traduções de mensagens
+
+```console
+python manage.py compilemessages --locale pt_BR
 ```
