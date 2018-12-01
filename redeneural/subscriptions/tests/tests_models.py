@@ -1,4 +1,5 @@
 from model_mommy import mommy
+
 from django.test import TestCase
 
 from redeneural.subscriptions.models import Subscription

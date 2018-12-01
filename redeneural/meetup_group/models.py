@@ -20,7 +20,7 @@ class MeetupGroup(AbstractBaseModel):
         verbose_name_plural = _('Meetup Groups')
 
     name = models.CharField(verbose_name=_('Name'), max_length=255)
-    slug = models.SlugField(verbose_name=_('Name'), max_length=255)
+    slug = models.SlugField(verbose_name=_('Slug'), max_length=255)
     description = models.TextField(verbose_name=_('Description'))
     image = models.ImageField(upload_to=get_meetup_group_image_path, verbose_name=_('Image'), null=True, blank=True)
     cover_image = models.ImageField(upload_to=get_meetup_group_cover_path, verbose_name=_('Cover Image'), null=True,

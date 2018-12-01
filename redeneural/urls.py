@@ -32,6 +32,9 @@ urlpatterns = [
     # Summernote
     path('summernote/', include('django_summernote.urls')),
 
+    # Subscription
+    path('eventos/', include('redeneural.subscriptions.urls', namespace='subscriptions')),
+
     # Home
     path('', include('redeneural.core.urls', namespace='core')),
 ]

@@ -51,6 +51,9 @@ msgstr "Descrição Longa"
 msgid "Image"
 msgstr "Imagem"
 
+msgid "Cover Image"
+msgstr "Imagem de capa"
+
 msgid "Images"
 msgstr "Imagens"
 
@@ -119,4 +122,16 @@ msgstr "Galerias"
 
 msgid "Title"
 msgstr "Título"
+
+msgid "Meetup Group"
+msgstr "Grupo de encontro"
+
+msgid "Meetup Groups"
+msgstr "Grupo de encontros"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Descriptions"
+msgstr "Descrições"
 

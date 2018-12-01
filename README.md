@@ -12,7 +12,7 @@
 
 ```console
 git clone git@github.com:RedeNeural/site.git
-cd schedules
+cd site
 virtualenv env --python=python3 # python 3.6 ou mais atual
 source env/bin/activate
 pip install -r requirements_dev.txt

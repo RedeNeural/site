@@ -1,5 +1,11 @@
 from django.shortcuts import render
 
+from redeneural.banner.models import Banner
+
 
 def home(request):
-    return render(request, 'core/index.html')
+    context = {
+        'banners': Banner.objects.all()
+    }
+
+    return render(request, 'core/index.html', context)
