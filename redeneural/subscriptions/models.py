@@ -15,7 +15,8 @@ class Subscription(AbstractBaseModel):
             ('event', 'email')
         )
 
-    event = models.ForeignKey('event.Event', verbose_name=_('Event'), on_delete=models.CASCADE)
+    event = models.ForeignKey('event.Event', verbose_name=_('Event'), on_delete=models.CASCADE,
+                              related_name='subscriptions')
     name = models.CharField(verbose_name=_('Name'), max_length=255)
     email = models.EmailField(verbose_name=_('Email'), max_length=255)
 

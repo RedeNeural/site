@@ -9,11 +9,11 @@ from redeneural.event.models import Event
 
 def form(request, event_slug):
     event = get_object_or_404(Event.objects.filter(is_active=True), slug=event_slug)
-    form = forms.SubscriptionForm()
+    form = forms.SubscriptionForm(event=event)
 
     if request.method == 'POST':
         data = request.POST.copy()
-        form = forms.SubscriptionForm(data)
+        form = forms.SubscriptionForm(event=event, data=data)
 
         if form.is_valid():
             models.Subscription.objects.create(event=event,
