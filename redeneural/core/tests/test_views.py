@@ -1,3 +1,4 @@
+from model_mommy import mommy
 from django.test import TestCase
 from django.urls import reverse_lazy
 
@@ -5,6 +6,7 @@ from django.urls import reverse_lazy
 class HomeTest(TestCase):
 
     def setUp(self):
+        mommy.make('event.Event', is_active=True, name="Evento Teste")
         self.response = self.client.get(reverse_lazy('core:home'))
 
     def test_get(self):
@@ -15,3 +17,6 @@ class HomeTest(TestCase):
 
     def test_context(self):
         self.assertIn('banners', self.response.context.keys())
+
+    def test_context_event(self):
+        self.assertTrue(self.response.context.get('evento_destaque'))

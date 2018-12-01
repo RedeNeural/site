@@ -16,11 +16,20 @@ def get_banner_path(instance, filename):
     return get_storage_path(filename, 'event/banner')
 
 
+class EventManager(models.Manager):
+
+    def get_next_event(self):
+        queryset = self.get_queryset().filter(is_active=True)
+        return queryset.order_by('start_date').first()
+
+
 class Event(AbstractBaseModel):
 
     class Meta:
         verbose_name = _('Event')
         verbose_name_plural = _('Events')
+
+    objects = EventManager()
 
     meetup_group = models.ForeignKey('meetup_group.MeetupGroup', on_delete=models.CASCADE)
     name = models.CharField(verbose_name=_('Name'), max_length=255)
