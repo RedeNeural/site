@@ -7,6 +7,9 @@ class HomeTest(TestCase):
 
     def setUp(self):
         mommy.make('event.Event', is_active=True, name="Evento Teste")
+        mommy.make('event.Event', is_active=True, name="Evento Teste 2")
+        mommy.make('event.Event', is_active=True, name="Evento Teste 3")
+        mommy.make('event.Event', is_active=True, name="Evento Teste 4")
         self.response = self.client.get(reverse_lazy('core:home'))
 
     def test_get(self):
@@ -20,6 +23,9 @@ class HomeTest(TestCase):
 
     def test_context_event(self):
         self.assertTrue(self.response.context.get('evento_destaque'))
+
+    def test_context_events(self):
+        self.assertTrue(self.response.context.get('proximos_eventos'))
 
     def test_html(self):
         self.assertContains(self.response, 'Evento Teste</a>')

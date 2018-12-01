@@ -8,6 +8,6 @@ def home(request):
     context = {
         'banners': Banner.objects.all(),
         'evento_destaque': Event.objects.get_next_event(),
-        'proximos_eventos': Event.objects.all()
+        'proximos_eventos': Event.objects.get_next_events()
     }
     return render(request, 'core/index.html', context)
