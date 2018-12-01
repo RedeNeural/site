@@ -6,3 +6,26 @@ body {
 .col-lg-12 {
     margin-top: 20px;
 }
+.event-spotlight{
+    background-color: #fff;
+}
+
+.padding-l-none{
+    padding-left: 0px;
+}
+
+.event-spotlight .event-content{
+    padding: 15px;
+}
+
+.next-event{
+    background-color: #fff;
+}
+
+.card-event{
+    padding-bottom: 10px;
+}
+
+.btn-event:hover{
+    color: black
+}
