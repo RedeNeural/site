@@ -20,3 +20,6 @@ class HomeTest(TestCase):
 
     def test_context_event(self):
         self.assertTrue(self.response.context.get('evento_destaque'))
+
+    def test_html(self):
+        self.assertContains(self.response, 'Evento Teste</a>')

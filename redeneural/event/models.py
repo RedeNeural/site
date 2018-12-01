@@ -19,7 +19,7 @@ def get_banner_path(instance, filename):
 class EventManager(models.Manager):
 
     def get_next_event(self):
-        queryset = self.get_queryset().filter(is_active=True)
+        queryset = self.filter(is_active=True)
         return queryset.order_by('start_date').first()
 
 

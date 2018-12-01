@@ -10,5 +10,4 @@ def home(request):
         'evento_destaque': Event.objects.get_next_event(),
         'proximos_eventos': Event.objects.all()
     }
-
     return render(request, 'core/index.html', context)
