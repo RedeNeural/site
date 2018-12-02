@@ -37,6 +37,9 @@ urlpatterns = [
 
     # Home
     path('', include('redeneural.core.urls', namespace='core')),
+
+    # Meetup_group
+    path('grupos/', include('redeneural.meetup_group.urls', namespace='meetup_group')),
 ]
 
 if settings.DEFAULT_FILE_STORAGE == 'django.core.files.storage.FileSystemStorage':
